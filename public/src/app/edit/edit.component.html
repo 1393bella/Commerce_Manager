@@ -1,0 +1,36 @@
+
+<h2>Update Product</h2>
+
+
+<form (submit)="BananaEdit(productToEdit)">
+    <div class="form-group">
+        <!-- {{ productToEdit | json}}<br><br> -->
+
+      <div id="mess_color" *ngFor='let err of errors'>
+              <p>{{err}}</p>
+      </div>
+
+      <label for="name">Name</label>
+      <input type="text"  class="form-control" name="productToEdit.name" [(ngModel)]="productToEdit.name"  placeholder="{{productToEdit.name}}">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInput">Quantity</label>
+      <input type="text" class="form-control" id="exampleInput" name="productToEdit.quantity"  [(ngModel)]="productToEdit.quantity"  placeholder="{{productToEdit.quantity}}">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInput">Price</label>
+      <input type="text" class="form-control" id="exampleInput" name="productToEdit.price"  [(ngModel)]="productToEdit.price"  placeholder="{{productToEdit.price}}">
+    </div>
+
+ 
+  <button class="btn btn-primary"  type="submit">verify updates</button>
+
+
+  <input type="button" value="Reset Changes" onClick="window.location.reload()">
+
+
+
+</form>    
+ 

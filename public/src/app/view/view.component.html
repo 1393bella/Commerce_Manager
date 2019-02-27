@@ -1,0 +1,38 @@
+
+<h2>Product Details</h2>
+
+<br>
+
+<div id="message_color" *ngFor='let err of errors'>
+    <p>{{err}}</p>
+</div>
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Product Name</th>
+      <th scope="col">Product Quantity</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+
+        <!-- <a (click)="onViewClick(product._id)" *ngFor="let product of products">{{view.name}}-{{view.price}} </a> -->
+
+
+  <tbody>
+    <tr>
+      <th scope="row">{{productToShow.name}}</th>
+      <th scope="row">{{productToShow.quantity}}</th>
+      <th scope="row">{{productToShow.price}}$</th>
+    </tr>
+</tbody>
+
+<button type="button" class="btn btn-danger" (click)="deleteProduct(productToShow._id)">Delete</button>
+
+<button class="btn btn-success" [routerLink]="['/']">Back</button>
+
+
+
+

@@ -1,0 +1,46 @@
+
+<h2>Product List</h2>
+
+<button type="button" class="btn btn-primary" (click)="onAddClick(product)">Add New Product</button>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">Action available</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products" >
+
+      <th scope="row">{{product._id}}</th>
+
+      <th scope="row">{{product.name}}</th>
+
+      <th scope="row">{{product.quantity}}</th>
+
+      <th scope="row">${{product.price}}</th>
+
+      <td>
+
+        <!-- <button type="button" class="btn btn-primary" (click)="onEditClick(product)">Edit</button> -->
+
+        <button class="btn btn-success" [routerLink]="['/view/' + product._id]">View</button>
+
+        <button class="btn btn-primary" [routerLink]="['/edit/' + product._id]">Edit</button>
+
+
+
+
+
+      </td> 
+    </tr>
+  </tbody>
+</table>
+
+
+

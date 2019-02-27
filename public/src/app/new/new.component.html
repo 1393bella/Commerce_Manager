@@ -1,0 +1,43 @@
+
+<h2>New Product</h2>
+
+
+<form (submit)="onCreateSubmit()">
+    <div class="form-group">
+
+      <!-- {{ newProduct | json}}<br> -->
+
+      <div id="message_color" *ngFor='let err of errors'>
+      <p>{{err}}</p>
+      </div>
+
+      <label for="name">Name</label>
+      <input type="text"  class="form-control" placeholder="Enter name" name="name" [(ngModel)]="newProduct.name">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInput">Quantity</label>
+      <input type="text" class="form-control" id="exampleInput" name="quantity" placeholder="Quantity of product" [(ngModel)]="newProduct.quantity">
+    </div>
+
+    <div class="form-group">
+    <label for="exampleInput">Price</label>
+    <input type="text" class="form-control" id="exampleInput" name="price" placeholder="Price" [(ngModel)]="newProduct.price">
+    </div>
+  
+
+    <input type="reset"  value="Reset">
+
+    <button type="submit"  class="btn btn-primary">Submit</button>
+
+</form>
+
+
+
+<!-- these buttons below are still not develeped -->
+<!-- <form (submit)="onResetSubmit()">
+<button type="button" class="btn btn-primary">Reset</button>
+</form> -->
+
+<!-- <a [routerLink]="['/reset']"><button class="resetButton">Reset</button></a> -->
+
