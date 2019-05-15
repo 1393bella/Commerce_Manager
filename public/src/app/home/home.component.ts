@@ -24,6 +24,8 @@ export class HomeComponent implements OnInit {
 
     ) { }
 
+
+    
   ngOnInit() {
     this.getProductsFromService()
   }
@@ -33,18 +35,16 @@ export class HomeComponent implements OnInit {
       this.goNew();
       console.log(`Click add is working`);
     }
-
     goNew() {
       this._router.navigate(['/new']);
     }
 
-
-  
+//////////////////////
+    //takoi vid methoda mojno ispolzovat tolko esli v buttone net [router link], nu etot code liwnui
     onViewClick(){ 
       this.goView();
       console.log(`Click view is working`);
     }
-
     goView() {
       this._router.navigate(['/view']);
     }
